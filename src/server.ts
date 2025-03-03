@@ -3,6 +3,8 @@ import mongoose from 'mongoose';
 import app from './app';
 import config from './app/config';
 
+
+
 let server: Server | null = null;
 
 // Database connection
@@ -43,7 +45,7 @@ async function bootstrap() {
       process.on('SIGTERM', () => gracefulShutdown('SIGTERM'));
       process.on('SIGINT', () => gracefulShutdown('SIGINT'));
 
-      // Error handling
+      //-------- Error handling -----
       process.on('uncaughtException', (error) => {
          console.error('Uncaught Exception:', error);
          gracefulShutdown('uncaughtException');
@@ -59,5 +61,5 @@ async function bootstrap() {
    }
 }
 
-// Start the application
+// ---------- application ---------
 bootstrap();
