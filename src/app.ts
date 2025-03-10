@@ -31,7 +31,7 @@ app.get("/", (req: Request, res: Response, next: NextFunction) => {
 
   res.status(StatusCodes.OK).json({
     success: true,
-    message: "Welcome to the Next Ecomamrce",
+    message: "Welcome to the Next Mart",
     version: "1.0.0",
     clientDetails: {
       ipAddress: clientIp,
@@ -45,7 +45,7 @@ app.get("/", (req: Request, res: Response, next: NextFunction) => {
       )} minutes`,
     },
     developerContact: {
-      email: "ssjoy43@gmail.com",
+      email: "fahimfiroz.ph@gmail.com",
       website: "https://programming-hero.com",
     },
   });
